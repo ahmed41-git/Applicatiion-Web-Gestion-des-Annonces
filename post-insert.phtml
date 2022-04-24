@@ -1,0 +1,22 @@
+<div class="w-25 mx-auto pt-4" >
+   
+    <form action="do-post-insert.php" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+    <label for="title">Title :</label>
+
+        <input type="text" name="title"  size="30" placeholder="title" value="" required id="titre" class="form-control">
+    </div>
+  
+    <div class="form-group">
+    <label for="content">Content :</label>
+        <textarea id="" cols="40" rows="12"  name="content" placeholder="write here" required id="content" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+    <label for="file">file :</label>
+  <!-- <p>Le fichier ne doit pas etre de tres gros taille(environ 30KO maximum) et doit etre au format jpeg</p>   -->
+        <input type="file" name="photo" value=""  placeholder=""  required accept="image/jpeg, image/jpg" id="file" class="form-control-file border">
+    </div>
+    <br>
+    <input type="submit" name="submit" value="Créer" class="btn btn-primary">
+    </form>
+</div>

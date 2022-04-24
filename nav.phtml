@@ -1,0 +1,26 @@
+
+<nav class="navbar navbar-expand-sm  bg-light navbar-dark fixed-top">
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+            <a href="list.php" class="nav-link" class="text-primary" class="font-weight-bolder">Accueil</a>
+        </li>
+        <li class="nav-item">
+            <a href="post-insert.php?<?=$_SESSION["session"];?>" class="nav-link" class="text-primary"  class="font-weight-bolder"> ADD POST</a>
+        </li> 
+        <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" class="text-primary "  class="font-weight-bolder">ACCOUNT</a>
+            <!-- <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Dropdown</a> -->
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="user-update.php?<?=$_SESSION["session"];?>" class="text-primary">Modifier Compte</a>
+                    <a class="dropdown-item" href="password-update.php?<?=$_SESSION["session"];?>" class="text-primary">Modifier Mot de passe</a>
+        
+                </div>
+        </li>
+        <li class="nav-item ">
+            <a href="sign-out.php" class="nav-link " class="text-primary"  class="font-weight-bolder">DECONNEXION</a>
+        </li>
+    </ul>
+</nav>
+<br><br><br>
+<div><h3><?=$CAPTION?></h3></div>
+

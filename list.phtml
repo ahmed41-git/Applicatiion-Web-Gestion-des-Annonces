@@ -1,0 +1,25 @@
+
+<ol class="list-group-flush list-group-horizontal">
+<?php foreach ($posts as $post) { ?>
+<li class="list-group-item ">
+<div class="row">
+    <div class="col"><?=date("d/m/Y",$post->getDateTime())?> </div>
+    <div class="col"><a href="view.php?<?=$post->getID()?>" style="font-size:20px" >
+        <?=$post->getTitle()?> par <?=$post->getUsername()?>
+        </a>
+    </div>
+           
+        <?php if (isOwner($post)) { ?>
+    <div class="col"><a href="post-update.php?<?=$post->getID()?>" class="btn btn-primary" role="button">[Modifier]</a></div>
+           
+    <div class="col"><a href="#demo" class="btn btn-warning" role="button" data-toggle="collapse">[Supprimer]</a></div>
+            <div id="demo" class="collapse">
+        <a href="list.php" class="btn btn-success" role="button">ANNULER</a>
+        <a href="do-post-delete.php?<?=$post->getID()?>" class="btn btn-danger" role="button">CONFIRMER</a>
+        </div>
+        <?php } ?>
+        </div>
+    </li>
+<?php } ?>
+</ol>
+
